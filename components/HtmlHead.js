@@ -15,7 +15,7 @@ const HtmlHead = (props) => (
   <Head>
     <title>Radzi Ramli</title>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
-    <meta name='description' content={'Radzi Ramli Online Portfolio'} />
+    <meta name='description' content={'Radzi Ramli Dev Portfolio'} />
     <meta name='keywords' content={'radzi, radzi ramli, radzi ramli malaysia'} />
 
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700,800' rel='stylesheet' />

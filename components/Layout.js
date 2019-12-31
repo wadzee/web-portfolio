@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import HtmlHead from './HtmlHead'
-import Header from './Header'
-import Footer from './Footer'
+import { Head, Header, Footer } from './index'
 
 const layoutStyle = {
   backgroundColor: '#fff',
@@ -23,7 +21,7 @@ class Layout extends Component {
 
     return (
       <div style={layoutStyle}>
-        <HtmlHead />
+        <Head />
 
         {showHeader ? <Header /> : null}
 

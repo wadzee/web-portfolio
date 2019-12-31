@@ -23,8 +23,6 @@ class Footer extends Component {
             background-color: #fff;
             flex: 1;
             color: white;
-            padding: 20px 0 0 0;
-            // border-top: 1px solid #f4f4f4;
           }
           .footer .column {
             padding: 40px 25px;
