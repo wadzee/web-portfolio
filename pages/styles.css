@@ -1,8 +1,131 @@
+section {
+    display: flex;
+    justify-content: center;
+}
 .name {
     color: brown;
 }
-.main {
-    background-color: #f4f4f4;
-    /* margin-top: -5.2%; */
+.main-container {
+    height: 90vh;
+    min-height: 46vw;
     display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 }
+.main-image {
+    -webkit-user-drag: none;
+    width: 130%;
+}
+.flex-row {
+    flex-direction: row;
+}
+.resume-btn {
+    border-radius: 50px;
+    width: 36%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13.5pt;
+    color: #fff;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: #45B29A;
+}
+.resume-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #4990FE22, 0 0 5px #4990FE22;
+  }
+.deselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.tick {
+    margin-top: -5px;
+    margin-left: 7px;
+    background-color: #3ECB3B;
+    width: 30px;
+    padding: 8px;
+    border-radius: 50px;
+}
+.long-line{
+    margin-left: 10.7%;
+    width: 105.7%;
+    height: 110px;
+    position: absolute;
+    z-index: 0;
+    background: #45B29A;
+    opacity: 0.4;
+    -webkit-transform: rotate(39deg);
+    -webkit-transform-origin: 32% 10%;
+}
+.about-me {
+    background-color: #45B29A;
+    opacity: 0.4;
+    height: 50vh;
+}
+.text-box {
+    margin-top: '7%';
+}
+.body-width {
+    width: 100%;
+    padding: 0 17% 0 17%;
+}
+.hello-text {
+    font-size: 35pt;
+    color: #6B5858;
+}
+.name-text {
+    font-weight: bold;
+    font-size: 35pt;
+    color: #45B29A;
+}
+.position-text {
+    font-size: 25pt;
+    color: #6B5858;
+}
+.me-text {
+    font-weight: 600;
+    margin-top: 13%;
+    font-size: 25pt;
+    color: #45B29A;
+}
+
+@media (max-width: 1280px) {
+    .body-width {
+        width: 100%;
+    }
+    .long-line {
+        width: 108%;
+        height: 90px;
+        -webkit-transform: rotate(39deg);
+        -webkit-transform-origin: 32% 10%;
+    }
+    .resume-btn {
+        width: 56%;
+        font-size: 12.5pt;
+    }
+    .hello-text {
+        font-size: 30pt;
+    }
+    .name-text {
+        font-size: 30pt;
+    }
+    .position-text {
+        font-size: 20pt;
+    }
+    .me-text {
+        font-size: 20pt;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-width {
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .long-line {
+        width: 0;
+    }
+}
+

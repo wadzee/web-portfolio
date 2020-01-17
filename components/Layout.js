@@ -5,7 +5,8 @@ const layoutStyle = {
   backgroundColor: '#fff',
   margin: 'auto',
   marginTop: 0,
-  marginBottom: 0
+  marginBottom: 0,
+  maxHeight: '100vh'
 }
 
 class Layout extends Component {
@@ -31,7 +32,6 @@ class Layout extends Component {
 
         <style jsx global>{`
           body {
-            background-color: #f1f1f1;
             font-family: 'Quicksand', sans-serif;
             margin: 0;
             overflow-x: hidden;
@@ -42,6 +42,7 @@ class Layout extends Component {
           }
 
           .container {
+            z-index: 10;
             margin: 0 auto;
             width: 100%;
             padding: 0 20px;

@@ -20,29 +20,29 @@ class Header extends Component {
   render () {
     return (
       <div className='header'>
-        <div className='headerContent container'>
+        <div className='container'>
           <Row>
-            <Col xs={12} lg={8}>
+            <Col xs={12} lg={2}>
               <Link href='/'>
                 <a>
-                  <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <img src='/static/img/avatar.png' style={{ width: 78 }} />
+                  <div>
+                    <img src='/static/img/avatar.png' style={{ width: 78, zIndex: 10 }} />
                   </div>
                 </a>
               </Link>
             </Col>
 
-            <Col xs={12} lg={16}>
+            <Col xs={12} lg={22}>
               <div className='menu'>
                 <Link href='/'>
-                  <a className='desktopMenu'>About</a>
+                  <a className='desktopMenu'>About</a> 
                 </Link>
 
-                <Link href='/policy'>
+                <Link href='/'>
                   <a className='desktopMenu'>Works</a>
                 </Link>
 
-                <Link href='/about'>
+                <Link href='/'>
                   <a className='desktopMenu'>Contact</a>
                 </Link>
               </div>
@@ -60,11 +60,11 @@ class Header extends Component {
                 <a><div className='mobileMenuLink'>About</div></a>
               </Link>
 
-              <Link href='/policy'>
+              <Link href='/'>
                 <a><div className='mobileMenuLink'>Works</div></a>
               </Link>
 
-              <Link href='/about'>
+              <Link href='/'>
                 <a><div className='mobileMenuLink'>Contact</div></a>
               </Link>
             </div>
@@ -157,7 +157,7 @@ class Header extends Component {
             color: ${theme.color.primary};
           }
           .header {
-            background-color: rgba(255,255,255, 0.8);
+            background-color: rgba(255,255,255, 1);
             height: 100px;
             display: flex;
             flex: 1;
