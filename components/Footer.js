@@ -25,7 +25,8 @@ class Footer extends Component {
             padding: 20px;
             font-size: 9.5pt;
             color: #222;
-            background-color: ${theme.color.primary};
+            background-color: ${this.props.color};
+            // border-top: 1px solid #fff;
           }
           .container {
             font-size: 12.5pt;

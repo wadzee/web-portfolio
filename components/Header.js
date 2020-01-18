@@ -157,7 +157,7 @@ class Header extends Component {
             color: ${theme.color.primary};
           }
           .header {
-            background-color: rgba(255,255,255, 1);
+            background-color: ${this.props.color};
             height: 100px;
             display: flex;
             flex: 1;

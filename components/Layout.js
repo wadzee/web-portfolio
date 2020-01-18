@@ -1,13 +1,6 @@
 import React, { Component } from 'react'
 import { Head, Header, Footer } from './index'
 
-const layoutStyle = {
-  backgroundColor: '#fff',
-  margin: 'auto',
-  marginTop: 0,
-  marginBottom: 0,
-  maxHeight: '100vh'
-}
 
 class Layout extends Component {
   async componentDidMount () {
@@ -15,20 +8,26 @@ class Layout extends Component {
   }
 
   render () {
-    const { children } = this.props
+    const { children, color } = this.props
     let { showFooter, showHeader } = this.props
     showFooter = typeof showFooter === 'boolean' ? showFooter : true
     showHeader = typeof showHeader === 'boolean' ? showHeader : true
+    const layoutStyle = {
+      backgroundColor: color,
+      margin: 'auto',
+      marginTop: 0,
+      marginBottom: 0,
+    }
 
     return (
       <div style={layoutStyle}>
         <Head />
 
-        {showHeader ? <Header /> : null}
+        {showHeader ? <Header color={color}/> : null}
 
         {children}
 
-        {showFooter ? <Footer /> : null}
+        {showFooter ? <Footer color={color}/> : null}
 
         <style jsx global>{`
           body {
