@@ -1,10 +1,10 @@
 {
-  "name": "next-with-antd",
-  "version": "1.0.0",
-  "repository": "https://github.com/hanpama/next-with-antd",
-  "description": "",
+  "name": "web-portofolio",
+  "version": "2.0",
+  "repository": "https://github.com/wadzee/web-portfolio",
+  "description": "Radzi Ramli Online Web Portfolio",
   "keywords": [],
-  "author": "Max Choi",
+  "author": "Radzi Ramli",
   "scripts": {
     "dev": "next -p 5000",
     "build": "next build",
@@ -12,7 +12,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@svgr/webpack": "^5.0.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.26.0",
@@ -24,9 +23,9 @@
     "next-images": "^1.3.0",
     "nprogress": "^0.2.0",
     "null-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "wowjs": "^1.1.3"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "serverless-nextjs-plugin": "^2.4.4"

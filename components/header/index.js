@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'next/router'
-import { theme } from '../config'
+import { SideModal } from '../index'
+import { theme } from '../../config'
 // import authService from '../services/auth'
 import { Col, Icon, Row } from 'antd'
 import Link from 'next/link'
@@ -17,7 +18,14 @@ class Header extends Component {
   componentDidMount () {
   }
 
+  handleClick = () => {
+    const { showMenu } = this.state
+    this.setState({ showMenu: false })
+  }
+
   render () {
+    const { color, darkMode, textColor } = this.props
+    const { showMenu } = this.state
     return (
       <div className='header'>
         <div className='container'>
@@ -51,30 +59,33 @@ class Header extends Component {
             </Col>
           </Row>
 
-          <div className='mobileMenuContainer'
-            style={{ display: this.state.showMenu ? '' : 'none' }}
-            onClick={() => this.setState({ showMenu: !this.state.showMenu })}
-          >
-            <div className='mobileMenu'>
-              <Link href='/'>
-                <a><div className='mobileMenuLink'>About</div></a>
+          <SideModal
+            showModal={showMenu}
+            onClose={this.handleClick}
+            color={color}
+            darkMode={darkMode}
+            >
+              <div className='mobileMenu'>
+              <Link href='/#about-me'>
+                <div className='mobileMenuLink' onClick={() => this.handleClick()}>About</div>
               </Link>
 
               <Link href='/'>
-                <a><div className='mobileMenuLink'>Works</div></a>
+                <div className='mobileMenuLink' onClick={() => this.handleClick()}>Works</div>
               </Link>
 
               <Link href='/'>
-                <a><div className='mobileMenuLink'>Contact</div></a>
+                <div className='mobileMenuLink' onClick={() => this.handleClick()}>Contact</div>
               </Link>
             </div>
-          </div>
+          </SideModal>
         </div>
 
         <style jsx>{`
           .hamburgerIcon {
             color: ${theme.color.primary};
-            font-size: 24pt;
+            margin-top: 7%;
+            font-size: 30pt;
             cursor: pointer;
             display: none;
             float: right;
@@ -134,21 +145,21 @@ class Header extends Component {
             min-height: 300px;
             position: absolute;
             z-index: 101;
-            top: 10%;
+            top: 37%;
             left: 6%;
             border-radius: 10px;
-            background-color: white;
             padding: 15px;
           }
           .mobileMenuLink {
+            font-size: 15pt;
+            text-align: center;
             padding: 10px 15px;
             cursor: pointer;
             margin: 5px 0;
-            font-weight: bold;
-            color: ${theme.color.primary}
+            color: ${textColor}
           }
           .mobileMenuLink:hover {
-            background-color: #f4f4f4;
+            background-color: #fff;
           }
           .mobileMenuLink a {
             color: ${theme.color.secondary}

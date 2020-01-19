@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Head, Header, Footer } from './index'
+import { Head, Header, Footer } from '../index'
 
 
 class Layout extends Component {
@@ -8,7 +8,7 @@ class Layout extends Component {
   }
 
   render () {
-    const { children, color } = this.props
+    const { children, color, darkMode, textColor } = this.props
     let { showFooter, showHeader } = this.props
     showFooter = typeof showFooter === 'boolean' ? showFooter : true
     showHeader = typeof showHeader === 'boolean' ? showHeader : true
@@ -23,7 +23,7 @@ class Layout extends Component {
       <div style={layoutStyle}>
         <Head />
 
-        {showHeader ? <Header color={color}/> : null}
+        {showHeader ? <Header color={color} darkMode={darkMode} textColor={textColor}/> : null}
 
         {children}
 

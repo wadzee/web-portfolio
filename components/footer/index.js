@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react'
 import { withRouter } from 'next/router'
-import { theme } from '../config'
-import Link from 'next/link'
 
 class Footer extends Component {
   render () {

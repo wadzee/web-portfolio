@@ -22,14 +22,15 @@ section {
 }
 .resume-btn {
     border-radius: 50px;
-    width: 36%;
     text-align: center;
     font-weight: bold;
     font-size: 13.5pt;
-    color: #fff;
     margin-top: 10%;
     padding: 20px;
     background-color: #45B29A;
+}
+.btn-width {
+    width: 36%;
 }
 .resume-btn:hover {
     cursor: pointer;
@@ -117,7 +118,6 @@ section {
         margin: 20px 30px; 
     }
     .resume-btn {
-        width: 56%;
         font-size: 12.5pt;
     }
     .hello-text {
