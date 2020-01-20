@@ -22,7 +22,7 @@ class Footer extends Component {
             flex: 1;
             padding: 20px;
             font-size: 9.5pt;
-            color: #222;
+            color: ${this.props.textColor};
             background-color: ${this.props.color};
             // border-top: 1px solid #fff;
           }

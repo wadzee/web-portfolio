@@ -27,7 +27,7 @@ class Layout extends Component {
 
         {children}
 
-        {showFooter ? <Footer color={color}/> : null}
+        {showFooter ? <Footer color={color} textColor={textColor}/> : null}
 
         <style jsx global>{`
           body {

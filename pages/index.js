@@ -9,18 +9,18 @@ import './styles.css'
 export default class App extends React.Component {
   
   state = {
-    color: '',
-    textColor: '',
-    lineColor: '',
-    darkMode: false
+    color: '#171c28',
+    textColor: '#fff',
+    lineColor: '#45B29A',
+    darkMode: true
   }
 
-  componentDidMount() {
-    const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (darkMode) {
-      this.setState({ textColor: '#fff', lineColor: '#45B29A', color: '#171c28', darkMode})
-    } else this.setState({ textColor: '#6B5858', color: '#fff', darkMode})
-  }
+  // componentDidMount() {
+  //   const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  //   if (darkMode) {
+  //     this.setState({ textColor: '#fff', lineColor: '#45B29A', color: '#171c28', darkMode})
+  //   } else this.setState({ textColor: '#6B5858', color: '#fff', darkMode})
+  // }
 
   render () {
     const { color, textColor, lineColor, darkMode } = this.state
