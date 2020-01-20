@@ -1,6 +1,7 @@
 import { Layout } from '../components/'
 import { Row, Col } from 'antd'
-import Link from 'next/link'
+import { text } from '../config'
+import Emoji from 'a11y-react-emoji'
 import './styles.css'
 
 
@@ -23,6 +24,7 @@ export default class App extends React.Component {
 
   render () {
     const { color, textColor, lineColor, darkMode } = this.state
+    const { front, back } = text
     return (
       <Layout color={color} darkMode={darkMode} textColor={textColor}>
       <div className='long-line' style={{ backgroundColor: lineColor, opacity: textColor === '#6B5858' ? 0.4 : 0.7}} />
@@ -63,29 +65,128 @@ export default class App extends React.Component {
         </Row>
       </section>
 
-      <section className='about-container border-section' id='about-me'> 
+      <section className='box-container' id='about-me'> 
         <Row style={{ flex: 1 }}>
           <Col lg={24} xs={24}>
-            <div className='intro-text'>
-              Under Construction!
+            <div className='intro-text border-section'>
+              01. About Me
+              <div className='describe-me'>
+              Hello! I'm Radzi, a software engineer who<span style={{ color: '#45B29A' }}> recently just graduated from University Malaysia Sarawak</span> where I majored in Computer 
+              Science. I have experience developing and (occasionally) designing 
+              software for both web and mobile application.
+              <br /> <br />
+              I love learning new things and have a strong interest in projects that
+              require both conceptual and analytical thinking to solve them. I aspire
+              towards a career that will allow me to channel my ability to the fullest
+              and at the same time grow them.
+              <br /> <br />
+              Here are a list of technologies I can do:
+              <br /> <br />
+              <Row>
+                <Col lg={6} xs={14}>
+                  <div className='list-wrapper'>
+                    <Emoji symbol='💪' /> I can:
+                    <div style={{ marginTop: '15px'}}>
+                    {front.map((txt, idx) => {
+                      return (
+                      <li key={idx} className='list-array'>
+                        {txt}
+                      </li>
+                      )
+                    })}
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={8} xs={10}>
+                  <div className='list-wrapper'>
+                    <br />
+                    <div style={{ marginTop: '15px'}}>
+                    {back.map((txt, idx) => {
+                      return (
+                      <li key={idx} className='list-array'>
+                        {txt}
+                      </li>
+                      )
+                    })}
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              </div>
             </div>
           </Col>
-          {/* <Col lg={12} xs={24}>
-            <div>
-
-            </div>
-          </Col> */}
         </Row>
       </section>
 
+      {/* <section className='box-container' id='work'> 
+        <Row style={{ flex: 1 }}>
+          <Col lg={{ span: 14, offset: 8 }} xs={24}>
+            <div className='intro-text'>
+              02. Some Things I've Build
+              <div className='describe-me'>
+              Hello! I'm Radzi, a software engineer who<span style={{ color: '#45B29A' }}> recently just graduated from University Malaysia Sarawak</span> where I majored in Computer 
+              Science. I have experience developing and (occasionally) designing 
+              software for both web and mobile application.
+              <br /> <br />
+              I love learning new things and have a strong interest in projects that
+              require both conceptual and analytical thinking to solve them. I aspire
+              towards a career that will allow me to channel my ability to the fullest
+              and at the same time grow them.
+              <br /> <br />
+              Here are a list of technologies I can do:
+              <br /> <br />
+              <Row>
+                <Col lg={10} xs={14}>
+                  <div className='list-wrapper'>
+                    <Emoji symbol='💪' /> I can:
+                    <div style={{ marginTop: '15px'}}>
+                    {front.map((txt, idx) => {
+                      return (
+                      <li key={idx} className='list-array'>
+                        {txt}
+                      </li>
+                      )
+                    })}
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={8} xs={10}>
+                  <div className='list-wrapper'>
+                    <br />
+                    <div style={{ marginTop: '15px'}}>
+                    {back.map((txt, idx) => {
+                      return (
+                      <li key={idx} className='list-array'>
+                        {txt}
+                      </li>
+                      )
+                    })}
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </section> */}
+
       <style jsx>{`
+        .list-wrapper {
+          
+        }
         .intro-text {
-          color: ${textColor};
+          color: rgb(204, 214, 246);
           font-weight: bold;
-          font-size: 25pt;
-          text-align: center;
-          padding: 10%;
-      }
+          font-size: 25px;
+          padding: 7% 10%;
+        }
+        @media (max-width: 480px) {
+          .intro-text {
+            padding: 3% 5%;
+            font-size: 22px;
+          }
+        }
         `}
       </style>
     </Layout>

@@ -19,5 +19,19 @@ module.exports = {
       dim: '#bbb',
       danger: '#e9235a'
     }
+  },
+  text: {
+    front: [
+      'JavaScript (ES6+)',
+      'React Native',
+      'Reactjs',
+      'Nextjs'
+    ],
+    back: [
+      'Node.js',
+      'PostgreSQL',
+      'MongoDB',
+      'Firebase'
+    ]
   }
 }

@@ -29,6 +29,11 @@ class Footer extends Component {
           .container {
             font-size: 12.5pt;
           }
+          @media (max-width: 480px) {
+            .container {
+              font-size 14px;
+            }
+          }
         `}</style>
       </div>
     )

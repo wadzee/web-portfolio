@@ -60,14 +60,15 @@ section {
     -webkit-transform: rotate(39deg);
     -webkit-transform-origin: 32% 10%;
 }
-.about-container {
-    z-index: 12;
-    opacity: 0.4;
-    height: 90vh;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
+.box-container {
+    z-index: 0;
+    margin: 5% 17% 5% 17%;
+    height: auto;
+}
+.describe-me {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .text-box {
     margin-top: '7%';
@@ -80,7 +81,6 @@ section {
     background-repeat: no-repeat;
     background-size: 4px 100px, 100px 4px, 4px 100px, 100px 4px, calc(100% - 8px) calc(100% - 8px);
     background-position: left top, left top, right bottom, right bottom, 4px 4px;
-    margin: 5% 17% 5% 17%;
     background-image: linear-gradient(#45B29A, #45B29A),
     linear-gradient(to right, #45B29A, #45B29A),
     linear-gradient(to left, #45B29A, #45B29A),
@@ -102,6 +102,9 @@ section {
     margin-top: 13%;
     font-size: 25pt;
     color: #45B29A;
+}
+.list-array {
+    margin-top: 2px;
 }
 
 @media (max-width: 1280px) {
@@ -138,6 +141,17 @@ section {
     .body-width {
         width: 100%;
         padding: 20px 30px;
+    }
+    .border-section {
+        background-size: 4px 50px, 50px 4px, 4px 50px, 50px 4px, calc(100% - 8px) calc(100% - 8px);
+    }
+    .describe-me {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .box-container {
+        margin: 0 0 10% 0;
+        height: auto;
     }
     .long-line {
         width: 0;
