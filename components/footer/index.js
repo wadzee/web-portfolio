@@ -7,8 +7,9 @@ class Footer extends Component {
     return (
       <div>
         <div className='copyright'>
-          <div className='container' style={{ textAlign: 'center', color: '#fff' }}>
-            © 2020 <span style={{ textDecorationLine: 'underline', marginBottom: 2 }}>Radzi Ramli</span>. All Rights Reserved.
+          <div className='container'>
+            Copyright © <span style={{ textDecorationLine: 'underline', marginBottom: 2 }}>Radzi Ramli</span> (2020)
+            
           </div>
         </div>
 
@@ -27,11 +28,14 @@ class Footer extends Component {
             // border-top: 1px solid #fff;
           }
           .container {
+            flex-direction: row;
             font-size: 12.5pt;
+            color: #fff;
           }
           @media (max-width: 480px) {
             .container {
               font-size 14px;
+              text-align: center;
             }
           }
         `}</style>

@@ -1,10 +1,8 @@
 import { Layout } from '../components/'
 import { Row, Col } from 'antd'
-import { text } from '../config'
+import { text, theme } from '../config'
 import Emoji from 'a11y-react-emoji'
 import './styles.css'
-
-
 
 export default class App extends React.Component {
   
@@ -24,7 +22,7 @@ export default class App extends React.Component {
 
   render () {
     const { color, textColor, lineColor, darkMode } = this.state
-    const { front, back } = text
+    const { front, back, witty } = text
     return (
       <Layout color={color} darkMode={darkMode} textColor={textColor}>
       <div className='long-line' style={{ backgroundColor: lineColor, opacity: textColor === '#6B5858' ? 0.4 : 0.7}} />
@@ -69,9 +67,9 @@ export default class App extends React.Component {
         <Row style={{ flex: 1 }}>
           <Col lg={24} xs={24}>
             <div className='intro-text border-section'>
-              01. About Me
+              <span style={{ color: theme.color.secondary}}>01.</span> About Me
               <div className='describe-me'>
-              Hello! I'm Radzi, a software engineer who<span style={{ color: '#45B29A' }}> recently just graduated from University Malaysia Sarawak</span> where I majored in Computer 
+              Hello! I'm Radzi, a software engineer who<span style={{ color: theme.color.secondary }}> recently just graduated from University Malaysia Sarawak</span> where I majored in Computer 
               Science. I have experience developing and (occasionally) designing 
               software for both web and mobile application.
               <br /> <br />
@@ -118,62 +116,73 @@ export default class App extends React.Component {
         </Row>
       </section>
 
-      {/* <section className='box-container' id='work'> 
+      <section className='box-container' id='experience'> 
         <Row style={{ flex: 1 }}>
-          <Col lg={{ span: 14, offset: 8 }} xs={24}>
-            <div className='intro-text'>
-              02. Some Things I've Build
-              <div className='describe-me'>
-              Hello! I'm Radzi, a software engineer who<span style={{ color: '#45B29A' }}> recently just graduated from University Malaysia Sarawak</span> where I majored in Computer 
-              Science. I have experience developing and (occasionally) designing 
-              software for both web and mobile application.
-              <br /> <br />
-              I love learning new things and have a strong interest in projects that
-              require both conceptual and analytical thinking to solve them. I aspire
-              towards a career that will allow me to channel my ability to the fullest
-              and at the same time grow them.
-              <br /> <br />
-              Here are a list of technologies I can do:
-              <br /> <br />
-              <Row>
-                <Col lg={10} xs={14}>
-                  <div className='list-wrapper'>
-                    <Emoji symbol='💪' /> I can:
-                    <div style={{ marginTop: '15px'}}>
-                    {front.map((txt, idx) => {
-                      return (
-                      <li key={idx} className='list-array'>
-                        {txt}
-                      </li>
-                      )
-                    })}
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={8} xs={10}>
-                  <div className='list-wrapper'>
-                    <br />
-                    <div style={{ marginTop: '15px'}}>
-                    {back.map((txt, idx) => {
-                      return (
-                      <li key={idx} className='list-array'>
-                        {txt}
-                      </li>
-                      )
-                    })}
-                    </div>
-                  </div>
-                </Col>
-              </Row>
+          <Col lg={{ span: 12, offset: 6 }} xs={24}>
+            <div className='intro-text work-container'>
+            <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
+              <div className='work-tabs'>
+                <span style={{ color: '#f4f4f4'}}>Internship</span> @ Witty Data
+              </div>
+              <div style={{ fontWeight: 'normal', fontSize: '18px' }}>
+                July 2019 - Dec 2019
+              </div>
+              <div className='witty-description'>
+                {witty.map((txt, idx) => {
+                  return (
+                    <ul>
+                    <li key={idx} className='witty-list'>
+                      {txt}
+                    </li>
+                    </ul>
+                  )
+                })}
               </div>
             </div>
+          </Col>
+        </Row>
+      </section>
+
+      {/* <section className='box-container' id='experience'> 
+        <Row style={{ flex: 1 }}>
+          <Col lg={{ span: 12, offset: 6 }} xs={24}>
+            <div className='intro-text work-container'>
+            <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
+              <div className='work-tabs'>
+                <span style={{ color: '#f4f4f4'}}>Internship</span> @ Witty Data
+              </div>
+              <div style={{ fontWeight: 'normal', fontSize: '18px' }}>
+                July 2019 - Dec 2019
+              </div>
+              <div className='witty-description'>
+                {witty.map((txt, idx) => {
+                  return (
+                    <ul>
+                    <li key={idx} className='witty-list'>
+                      {txt}
+                    </li>
+                    </ul>
+                  )
+                })}
+              </div>
+            </div>
+          </Col>
+          <Col lg={10}>
+            
           </Col>
         </Row>
       </section> */}
 
       <style jsx>{`
-        .list-wrapper {
-          
+        .witty-list {
+          float: left;
+          margin-top: 10px;
+          font-size: 17px;
+        }
+        .work-tabs {
+          margin-top: 25px;
+          font-size: 18pt;
+          color: rgb(100, 255, 218);
         }
         .intro-text {
           color: rgb(204, 214, 246);
@@ -185,6 +194,9 @@ export default class App extends React.Component {
           .intro-text {
             padding: 3% 5%;
             font-size: 22px;
+          }
+          .work-container {
+            margin: 5%;
           }
         }
         `}
