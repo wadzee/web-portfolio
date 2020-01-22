@@ -1,5 +1,6 @@
 import { Layout } from '../components/'
 import { Row, Col } from 'antd'
+import ReactGA, { initialize } from 'react-ga'
 import { text, theme } from '../config'
 import Emoji from 'a11y-react-emoji'
 import './styles.css'
@@ -13,12 +14,16 @@ export default class App extends React.Component {
     darkMode: true
   }
 
-  // componentDidMount() {
-  //   const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  //   if (darkMode) {
-  //     this.setState({ textColor: '#fff', lineColor: '#45B29A', color: '#171c28', darkMode})
-  //   } else this.setState({ textColor: '#6B5858', color: '#fff', darkMode})
-  // }
+  initializeGA () {
+    ReactGA.initialize('UA-156695268-1')
+    ReactGA.pageview('/')
+  }
+
+  componentDidMount() {
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      console.log('env', process.env.NODE_ENV )
+    } else this.initializeGA()
+  }
 
   render () {
     const { color, textColor, lineColor, darkMode } = this.state
