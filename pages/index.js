@@ -1,6 +1,6 @@
 import { Layout } from '../components/'
 import { Row, Col } from 'antd'
-import ReactGA, { initialize } from 'react-ga'
+import ReactGA from 'react-ga'
 import { text, theme } from '../config'
 import Emoji from 'a11y-react-emoji'
 import './styles.css'
@@ -16,18 +16,19 @@ export default class App extends React.Component {
 
   initializeGA () {
     ReactGA.initialize('UA-156695268-1')
-    ReactGA.pageview('/')
   }
 
   componentDidMount() {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      console.log('env', process.env.NODE_ENV )
-    } else this.initializeGA()
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'production') {
+      this.initializeGA()
+    }
   }
 
   render () {
     const { color, textColor, lineColor, darkMode } = this.state
     const { front, back, witty } = text
+    const settings = {
+    }
     return (
       <Layout color={color} darkMode={darkMode} textColor={textColor}>
       <div className='long-line' style={{ backgroundColor: lineColor, opacity: textColor === '#6B5858' ? 0.4 : 0.7}} />
@@ -71,10 +72,10 @@ export default class App extends React.Component {
       <section className='box-container' id='about-me'> 
         <Row style={{ flex: 1 }}>
           <Col lg={24} xs={24}>
-            <div className='intro-text border-section'>
+            <div className='intro-text section-container'>
               <span style={{ color: theme.color.secondary}}>01.</span> About Me
               <div className='describe-me'>
-              Hello! I'm Radzi, a software engineer who<span style={{ color: theme.color.secondary }}> recently just graduated from University Malaysia Sarawak</span> where I majored in Computer 
+              Hello! I'm Radzi, a software engineer who<span style={{ color: theme.color.secondary }}> recently just graduated from University Malaysia Sarawak</span> with a degree in Computer 
               Science. I have experience developing and (occasionally) designing 
               software for both web and mobile application.
               <br /> <br />
@@ -123,7 +124,7 @@ export default class App extends React.Component {
 
       <section className='box-container' id='experience'> 
         <Row style={{ flex: 1 }}>
-          <Col lg={{ span: 12, offset: 6 }} xs={24}>
+          <Col lg={24} xs={24}>
             <div className='intro-text work-container'>
             <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
               <div className='work-tabs'>
@@ -132,57 +133,45 @@ export default class App extends React.Component {
               <div style={{ fontWeight: 'normal', fontSize: '18px' }}>
                 July 2019 - Dec 2019
               </div>
-              <div className='witty-description'>
+              <ul>
                 {witty.map((txt, idx) => {
                   return (
-                    <ul>
                     <li key={idx} className='witty-list'>
                       {txt}
                     </li>
-                    </ul>
                   )
                 })}
-              </div>
+              </ul>
             </div>
           </Col>
         </Row>
       </section>
 
-      {/* <section className='box-container' id='experience'> 
+      <section className='box-container' id='projects'> 
         <Row style={{ flex: 1 }}>
-          <Col lg={{ span: 12, offset: 6 }} xs={24}>
-            <div className='intro-text work-container'>
-            <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
-              <div className='work-tabs'>
-                <span style={{ color: '#f4f4f4'}}>Internship</span> @ Witty Data
-              </div>
-              <div style={{ fontWeight: 'normal', fontSize: '18px' }}>
-                July 2019 - Dec 2019
-              </div>
-              <div className='witty-description'>
-                {witty.map((txt, idx) => {
-                  return (
-                    <ul>
-                    <li key={idx} className='witty-list'>
-                      {txt}
-                    </li>
-                    </ul>
-                  )
-                })}
-              </div>
+          <Col lg={24} xs={24}>
+            <div className='intro-text section-container'>
+            <span style={{ color: theme.color.secondary}}>03.</span> Projects I've Worked On
+              <div className='construction'>
+              <Emoji style={{ color: '#ffc107', fontSize: '25pt'}} symbol='🛠' /> Under Construction ! <Emoji style={{ color: '#ffc107', fontSize: '25pt'}} symbol='🛠' />
+              </div>{/* <span style={{ color: '#f4f4f4'}}>Internship</span> @ Witty Data */}
             </div>
           </Col>
-          <Col lg={10}>
-            
-          </Col>
         </Row>
-      </section> */}
+      </section>
 
       <style jsx>{`
         .witty-list {
           float: left;
           margin-top: 10px;
           font-size: 17px;
+        }
+        .construction {
+          text-align: center;
+          margin-top: 25%;
+        }
+        .work-container {
+          margin: 0% 10%;
         }
         .work-tabs {
           margin-top: 25px;
@@ -200,6 +189,9 @@ export default class App extends React.Component {
             padding: 3% 5%;
             font-size: 22px;
           }
+          .construction {
+            margin-top: 70%;
+          }
           .witty-list {
             font-size: 15px;
           }
@@ -207,7 +199,10 @@ export default class App extends React.Component {
             font-size: 20px;
           }
           .work-container {
-            margin: 5%;
+            margin: 0% 5%;
+          }
+          .section-container {
+            margin: 0% 5%;
           }
         }
         `}

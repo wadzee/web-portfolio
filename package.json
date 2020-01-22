@@ -12,6 +12,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.10.35",
     "@svgr/webpack": "^5.0.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
@@ -27,6 +28,7 @@
     "null-loader": "^3.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
     "react-ga": "^2.7.0"

@@ -28,6 +28,7 @@ class Footer extends Component {
             // border-top: 1px solid #fff;
           }
           .container {
+            text-align: center;
             flex-direction: row;
             font-size: 12.5pt;
             color: #fff;

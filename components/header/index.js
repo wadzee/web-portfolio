@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { withRouter } from 'next/router'
 import { SideModal } from '../index'
 import { theme } from '../../config'
-// import authService from '../services/auth'
 import { Col, Icon, Row } from 'antd'
 import Link from 'next/link'
 
@@ -42,17 +42,21 @@ class Header extends Component {
 
             <Col xs={12} lg={22}>
               <div className='menu'>
-                <Link href='/'>
-                  <a className='desktopMenu'>About</a> 
-                </Link>
+                <AnchorLink href='/about-me'>
+                  <div className='desktopMenu'>About</div> 
+                </AnchorLink>
 
-                <Link href='/'>
-                  <a className='desktopMenu'>Works</a>
-                </Link>
+                <AnchorLink href='/experience'>
+                  <div className='desktopMenu'>Experience</div>
+                </AnchorLink>
 
-                <Link href='/'>
-                  <a className='desktopMenu'>Contact</a>
-                </Link>
+                <AnchorLink href='/projects'>
+                  <div className='desktopMenu'>Works</div>
+                </AnchorLink>
+
+                <AnchorLink href='/projects'>
+                  <div className='desktopMenu'>Contact</div>
+                </AnchorLink>
               </div>
 
               <div className='hamburgerIcon' onClick={() => this.setState({ showMenu: true })}>☰</div>
@@ -66,17 +70,21 @@ class Header extends Component {
             darkMode={darkMode}
             >
               <div className='mobileMenu'>
-              <Link href='/#about-me'>
+              <AnchorLink href='/about-me'>
                 <div className='mobileMenuLink' onClick={() => this.handleClick()}>About</div>
-              </Link>
+              </AnchorLink>
 
-              <Link href='/'>
+              <AnchorLink href='/experience'>
+                <div className='mobileMenuLink' onClick={() => this.handleClick()}>Experience</div>
+              </AnchorLink>
+
+              <AnchorLink href='/projects'>
                 <div className='mobileMenuLink' onClick={() => this.handleClick()}>Works</div>
-              </Link>
+              </AnchorLink>
 
-              <Link href='/'>
+              <AnchorLink href='/projects'>
                 <div className='mobileMenuLink' onClick={() => this.handleClick()}>Contact</div>
-              </Link>
+              </AnchorLink>
             </div>
           </SideModal>
         </div>
@@ -153,13 +161,15 @@ class Header extends Component {
           .mobileMenuLink {
             font-size: 15pt;
             text-align: center;
+            font-weight: bold;
             padding: 10px 15px;
             cursor: pointer;
             margin: 5px 0;
             color: ${textColor}
           }
           .mobileMenuLink:hover {
-            background-color: #fff;
+            background-color: #f4f4f4;
+            color: ${theme.color.secondary};
           }
           .mobileMenuLink a {
             color: ${theme.color.secondary}
