@@ -200,6 +200,12 @@ export default class App extends React.Component {
             padding: 3% 5%;
             font-size: 22px;
           }
+          .witty-list {
+            font-size: 15px;
+          }
+          .work-tabs {
+            font-size: 20px;
+          }
           .work-container {
             margin: 5%;
           }
