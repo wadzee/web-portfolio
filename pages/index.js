@@ -152,13 +152,12 @@ export default class App extends React.Component {
           <Col lg={24} xs={24} sm={24}>
             <div className='intro-text section-container'>
             <span style={{ color: theme.color.secondary}}>03.</span> Projects I've Worked On
-              {/* <div className='construction'>
+              <div className='construction'>
               <div>
                 <img src='/static/img/construction.svg' style={{ width: '80%'}} />
               </div>
               Under Construction!
-              </div> */}
-
+              </div>
             </div>
           </Col>
         </Row>
