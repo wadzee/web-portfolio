@@ -47,8 +47,8 @@ section {
     border-radius: 50px;
 }
 .long-line{
-    margin-left: 10.7%;
-    width: 110%;
+    margin-left: 50px;
+    width: 160%;
     height: 110px;
     position: absolute;
     z-index: 0;
@@ -71,9 +71,11 @@ section {
 .text-box {
     margin-top: '7%';
 }
+.row-width {
+    width: 1180px;
+}
 .body-width {
-    width: 100%;
-    padding: 0 22%;
+    width: 1180px;
 }
 .border-section {
     background-repeat: no-repeat;
@@ -105,9 +107,18 @@ section {
     margin-top: 2px;
 }
 
+@media (min-width: 160em) {
+    .long-line{
+        display: none;
+    }
+}
+
 @media (max-width: 65em) {
     .main-container {
         height: 90vh;
+    }
+    .row-width {
+        width: 100%;
     }
     .body-width {
         width: 100%;

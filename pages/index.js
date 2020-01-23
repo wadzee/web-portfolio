@@ -31,13 +31,9 @@ export default class App extends React.Component {
     }
     return (
       <Layout color={color} darkMode={darkMode} textColor={textColor}>
-      <Row>
-        <Col lg={24} md={0} xs={0}>
-          <div className='long-line' style={{ backgroundColor: lineColor, opacity: textColor === '#6B5858' ? 0.4 : 0.7}} />
-        </Col>
-      </Row>
       <section className='main-container'>
         <Row className='body-width'>
+          <div className='long-line' style={{ backgroundColor: lineColor, opacity: 0.7}} />
           <Col lg={12} md={24} sm={24} xs={24}>
             <div className='text-box'>
                 <div className='hello-text deselect' style={{ color: textColor }}>Hello, I'm</div>
@@ -74,7 +70,7 @@ export default class App extends React.Component {
       </section>
 
       <section className='box-container' id='about-me'> 
-        <Row style={{ flex: 1 }}>\
+        <Row className='row-width'>
           <Col lg={24} xs={24} sm={24}>
             <div className='intro-text section-container'>
               <span style={{ color: theme.color.secondary}}>01.</span> About Me
@@ -127,7 +123,7 @@ export default class App extends React.Component {
       </section>
 
       <section className='box-container' id='experience'> 
-        <Row style={{ flex: 1 }}>
+        <Row className='row-width'>
           <Col lg={{ span: 12, offset: 6 }} md={24} xs={24}>
             <div className='intro-text work-container'>
             <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
@@ -152,16 +148,17 @@ export default class App extends React.Component {
       </section>
 
       <section className='box-container' id='projects'> 
-        <Row style={{ flex: 1 }}>
+        <Row className='row-width'>
           <Col lg={24} xs={24} sm={24}>
             <div className='intro-text section-container'>
             <span style={{ color: theme.color.secondary}}>03.</span> Projects I've Worked On
-              <div className='construction'>
+              {/* <div className='construction'>
               <div>
                 <img src='/static/img/construction.svg' style={{ width: '80%'}} />
               </div>
               Under Construction!
-              </div>
+              </div> */}
+
             </div>
           </Col>
         </Row>
@@ -186,7 +183,7 @@ export default class App extends React.Component {
           color: rgb(204, 214, 246);
           font-weight: bold;
           font-size: 25px;
-          padding: 7% 10%;
+          padding: 7% 7%;
         }
         @media (max-width: 480px) {
           .intro-text {
