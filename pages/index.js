@@ -31,10 +31,14 @@ export default class App extends React.Component {
     }
     return (
       <Layout color={color} darkMode={darkMode} textColor={textColor}>
-      <div className='long-line' style={{ backgroundColor: lineColor, opacity: textColor === '#6B5858' ? 0.4 : 0.7}} />
+      <Row>
+        <Col lg={24} md={0} xs={0}>
+          <div className='long-line' style={{ backgroundColor: lineColor, opacity: textColor === '#6B5858' ? 0.4 : 0.7}} />
+        </Col>
+      </Row>
       <section className='main-container'>
         <Row className='body-width'>
-          <Col lg={12} xs={24}>
+          <Col lg={12} md={24} sm={24} xs={24}>
             <div className='text-box'>
                 <div className='hello-text deselect' style={{ color: textColor }}>Hello, I'm</div>
                 <div className='name-text deselect'><span style={{ color: textColor, marginRight: 7 }}>{'{'}</span>Radzi Ramli<span style={{ color: textColor, marginLeft: 8}}>{'}'}</span></div>
@@ -52,7 +56,7 @@ export default class App extends React.Component {
                       <img src='/static/img/tick.svg' className='tick' />
                    </span>
                 </div>
-                <Col lg={8} xs={14}>
+                <Col lg={10} sm={8} xs={15}>
                 {/* <a href='/static/file/resume.pdf' target='_blank'> */}
                   <div className='resume-btn'>
                       <span className='deselect' style={{ color: '#fff'}}>Grab My Resume</span>
@@ -61,7 +65,7 @@ export default class App extends React.Component {
                 </Col>
             </div>
           </Col>
-          <Col lg={12} xs={0}>
+          <Col lg={12} sm={0} xs={0}>
             <div>
               <img src='/static/img/laptop.svg' className='main-image' />
             </div>
@@ -70,8 +74,8 @@ export default class App extends React.Component {
       </section>
 
       <section className='box-container' id='about-me'> 
-        <Row style={{ flex: 1 }}>
-          <Col lg={24} xs={24}>
+        <Row style={{ flex: 1 }}>\
+          <Col lg={24} xs={24} sm={24}>
             <div className='intro-text section-container'>
               <span style={{ color: theme.color.secondary}}>01.</span> About Me
               <div className='describe-me'>
@@ -87,7 +91,7 @@ export default class App extends React.Component {
               Here are a list of technologies I can do:
               <br /> <br />
               <Row>
-                <Col lg={6} xs={14}>
+                <Col lg={9} xs={14}>
                   <div className='list-wrapper'>
                     <Emoji symbol='💪' /> I can:
                     <div style={{ marginTop: '15px'}}>
@@ -101,7 +105,7 @@ export default class App extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Col lg={8} xs={10}>
+                <Col lg={9} xs={10}>
                   <div className='list-wrapper'>
                     <br />
                     <div style={{ marginTop: '15px'}}>
@@ -124,7 +128,7 @@ export default class App extends React.Component {
 
       <section className='box-container' id='experience'> 
         <Row style={{ flex: 1 }}>
-          <Col lg={24} xs={24}>
+          <Col lg={{ span: 12, offset: 6 }} md={24} xs={24}>
             <div className='intro-text work-container'>
             <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
               <div className='work-tabs'>
@@ -149,12 +153,15 @@ export default class App extends React.Component {
 
       <section className='box-container' id='projects'> 
         <Row style={{ flex: 1 }}>
-          <Col lg={24} xs={24}>
+          <Col lg={24} xs={24} sm={24}>
             <div className='intro-text section-container'>
             <span style={{ color: theme.color.secondary}}>03.</span> Projects I've Worked On
               <div className='construction'>
-              <Emoji style={{ color: '#ffc107', fontSize: '25pt'}} symbol='🛠' /> Under Construction ! <Emoji style={{ color: '#ffc107', fontSize: '25pt'}} symbol='🛠' />
-              </div>{/* <span style={{ color: '#f4f4f4'}}>Internship</span> @ Witty Data */}
+              <div>
+                <img src='/static/img/construction.svg' style={{ width: '80%'}} />
+              </div>
+              Under Construction!
+              </div>
             </div>
           </Col>
         </Row>
@@ -169,9 +176,6 @@ export default class App extends React.Component {
         .construction {
           text-align: center;
           margin-top: 25%;
-        }
-        .work-container {
-          margin: 0% 10%;
         }
         .work-tabs {
           margin-top: 25px;
@@ -190,7 +194,7 @@ export default class App extends React.Component {
             font-size: 22px;
           }
           .construction {
-            margin-top: 70%;
+            margin-top: 50%;
           }
           .witty-list {
             font-size: 15px;

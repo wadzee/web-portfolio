@@ -6,10 +6,7 @@ section {
     color: brown;
 }
 .main-container {
-    height: 90vh;
     min-height: 46vw;
-    display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
 }
@@ -25,7 +22,7 @@ section {
     text-align: center;
     font-weight: bold;
     font-size: 13.5pt;
-    margin-top: 10%;
+    margin-top: 35px;
     padding: 20px;
     background-color: #45B29A;
 }
@@ -64,7 +61,7 @@ section {
     z-index: 0;
     padding-top: 5%;
     margin: 0% 17% 5% 17%;
-    height: 45vw;
+    min-height: 45vw;
 }
 .describe-me {
     margin-top: 25px;
@@ -76,7 +73,7 @@ section {
 }
 .body-width {
     width: 100%;
-    padding: 0 17% 0 17%;
+    padding: 0 22%;
 }
 .border-section {
     background-repeat: no-repeat;
@@ -108,18 +105,13 @@ section {
     margin-top: 2px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 65em) {
+    .main-container {
+        height: 90vh;
+    }
     .body-width {
         width: 100%;
-    }
-    .long-line {
-        width: 108%;
-        height: 90px;
-        -webkit-transform: rotate(39deg);
-        -webkit-transform-origin: 32% 10%;
-    }
-    .border-section {
-        margin: 20px 30px; 
+        padding: 0 10%;
     }
     .resume-btn {
         font-size: 12.5pt;
@@ -135,13 +127,6 @@ section {
     }
     .me-text {
         font-size: 20pt;
-    }
-}
-
-@media (max-width: 480px) {
-    .body-width {
-        width: 100%;
-        padding: 20px 30px;
     }
     .border-section {
         margin: 0% 5%;
