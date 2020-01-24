@@ -18,9 +18,9 @@ const HtmlHead = (props) => (
     <meta name='keywords' content={'radzi, radzi ramli, radzi ramli malaysia'} />
 
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700,800' rel='stylesheet' />
-    {/* <link rel='stylesheet' type='text/css' href='/static/css/nprogress.css' /> */}
-    <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon.png' />
-    <link rel='icon' href='/static/favicon.png' />
+    {/* <link rel='stylesheet' type='text/css' href='/css/nprogress.css' /> */}
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
+    <link rel='icon' href='/favicon.png' />
 
     {props.children}
   </Head>

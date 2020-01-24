@@ -34,7 +34,7 @@ class Header extends Component {
               <Link href='/'>
                 <a>
                   <div>
-                    <img src='/static/img/avatar.png' style={{ width: 78, zIndex: 10 }} />
+                    <img src='/img/avatar.png' style={{ width: 78, zIndex: 10 }} />
                   </div>
                 </a>
               </Link>

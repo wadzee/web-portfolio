@@ -2,6 +2,7 @@ import { Layout } from '../components/'
 import { Row, Col } from 'antd'
 import ReactGA from 'react-ga'
 import { text, theme } from '../config'
+import { Project } from '../constant'
 import Emoji from 'a11y-react-emoji'
 import './styles.css'
 
@@ -16,6 +17,7 @@ export default class App extends React.Component {
 
   initializeGA () {
     ReactGA.initialize('UA-156695268-1')
+    ReactGA.pageview(window.location.pathname)
   }
 
   componentDidMount() {
@@ -44,16 +46,16 @@ export default class App extends React.Component {
                   <br/>
                   <span className='flex-row'>
                     Website
-                      <img src='/static/img/tick.svg' className='tick' />
+                      <img src='/img/tick.svg' className='tick' />
                    </span>
                   <br/>
                   <span className='flex-row'>
                     Mobile
-                      <img src='/static/img/tick.svg' className='tick' />
+                      <img src='/img/tick.svg' className='tick' />
                    </span>
                 </div>
                 <Col lg={10} sm={8} xs={15}>
-                {/* <a href='/static/file/resume.pdf' target='_blank'> */}
+                {/* <a href='/file/resume.pdf' target='_blank'> */}
                   <div className='resume-btn'>
                       <span className='deselect' style={{ color: '#fff'}}>Grab My Resume</span>
                   </div>
@@ -63,7 +65,7 @@ export default class App extends React.Component {
           </Col>
           <Col lg={12} sm={0} xs={0}>
             <div>
-              <img src='/static/img/laptop.svg' className='main-image' />
+              <img src='/img/laptop.svg' className='main-image' />
             </div>
           </Col>
         </Row>
@@ -152,18 +154,107 @@ export default class App extends React.Component {
           <Col lg={24} xs={24} sm={24}>
             <div className='intro-text section-container'>
             <span style={{ color: theme.color.secondary}}>03.</span> Projects I've Worked On
-              <div className='construction'>
+              {/* <div className='construction'>
               <div>
-                <img src='/static/img/construction.svg' style={{ width: '80%'}} />
+                <img src='/img/construction.svg' style={{ width: '80%'}} />
               </div>
               Under Construction!
+              </div> */}
+              <div className='project-section'>
+                <Row style={{ width: '100%'}}>
+                  <Col md={16} sm={24} xs={24}>
+                    <img src='/img/lamboplace.png' className='project-img' alt='/img/lamboplace.png' />
+                  </Col>
+                  <Col md={8} sm={24} xs={24}>
+                    <div className='project-container'>
+                      Lamboplace
+                      <div className='project-madeAt'>
+                        Made at <span style={{ color: theme.color.secondary, fontWeight: 'bold' }}>Witty Data</span>
+                      </div>
+                      <div className='project-description'>
+                        Lamboplace is an e-commerce platform that promote <span style={{ color: theme.color.secondary}}>"healthier shopping habits"</span> for   
+                        consumer by providing a carefully curated merchants and products on the platform.                      </div>
+                      <div className='project-tool'>
+                        { Project.lamboplace.tools.map((txt, idx) => {
+                          return (
+                            <div>
+                              {txt}
+                            </div>
+                        )})}
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+              <div className='project-section'>
+                <Row style={{ width: '100%'}}>
+                  <Col md={16} sm={24} xs={24}>
+                    <img src='/img/ikang.png' className='project-img' alt='/img/lamboplace.png' />
+                  </Col>
+                  <Col md={8} sm={24} xs={24}>
+                    <div className='project-container'>
+                      Ikang
+                      <div className='project-madeAt'>
+                        Made at <span style={{ color: theme.color.secondary, fontWeight: 'bold' }}>Witty Data</span>
+                      </div>
+                      <div className='project-description'>
+                        Ikang is an e-commerce platform that <span style={{ color: theme.color.secondary}}>sells fresh seafood products</span> online   
+                        and provides deliveries to most parts of Klang Valley.
+                      </div>
+                      <div className='project-tool'>
+                        { Project.ikang.tools.map((txt, idx) => {
+                          return (
+                            <div>
+                              {txt}
+                            </div>
+                        )})}
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
               </div>
             </div>
           </Col>
+          
         </Row>
       </section>
 
       <style jsx>{`
+        .project-img {
+          width: 85%;
+        }
+        .project-container {
+          margin-top: 10%;
+          font-size: 22px;
+          text-align: right;
+        }
+        .project-section {
+          margin-top: 40px;
+        }
+        .project-madeAt {
+          font-weight: normal;
+          font-size: 22px;
+        }
+        .project-tool {
+          justify-content: space-between;
+          text-align: right;
+          margin-top: 15px;
+          flex-direction: row;
+          display: flex;
+          font-size: 15px;
+        }
+        .project-description {
+          border-radius: 10px;
+          text-align: left;
+          font-size: 15px;
+          font-weight: normal;
+          z-index: 10;
+          width: 140%;
+          margin: 25px 0 0 -40%;
+          padding: 20px;
+          background-color: rgb(23, 42, 69);
+          box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+        }
         .witty-list {
           float: left;
           margin-top: 10px;
@@ -185,6 +276,29 @@ export default class App extends React.Component {
           padding: 7% 7%;
         }
         @media (max-width: 480px) {
+          .project-madeAt {
+            font-size: 17px;
+          }
+          .project-tool {
+            font-size: 12.5px;
+          }
+          .project-container {
+            text-align: left;
+            font-size: 20px;
+            margin: 0;
+            padding 5%;
+            background-color: rgb(23, 42, 69);
+            box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+          }
+          .project-description {
+            box-shadow: none;
+            padding: 0;
+            width: 100%;
+            margin: 10px 0;
+          }
+          .project-img {
+            width: 100%;
+          }
           .intro-text {
             padding: 3% 5%;
             font-size: 22px;
