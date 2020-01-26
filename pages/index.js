@@ -275,6 +275,23 @@ export default class App extends React.Component {
           font-size: 25px;
           padding: 7% 7%;
         }
+        @media (min-width: 85.375em) and (max-width: 119em) {
+          .project-tool {
+            font-size: 12px;
+          }
+          .project-description {
+            font-size: 13.5px;
+            margin-top: 5%;
+          }
+        }
+        @media (min-width: 160em) {
+          .project-tool {
+            font-size: 17px;
+          }
+          .project-description {
+            font-size: 18.5px;
+          }
+        }
         @media (max-width: 480px) {
           .project-madeAt {
             font-size: 17px;

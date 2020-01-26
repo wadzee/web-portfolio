@@ -52,9 +52,22 @@ class Layout extends Component {
             justiy-content: center;
           }
 
-          @media (min-width: 1180px) {
+          
+        @media (min-width: 85.375em) and (max-width: 119em) {
+          .container {
+            width: 980px;
+          }
+        }
+
+          @media (min-width: 120em) {
             .container {
               width: 1180px;
+            }
+          }
+
+          @media (min-width: 160em) {
+            .container {
+              width: 1380px;
             }
           }
         `}</style>
