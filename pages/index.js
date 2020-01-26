@@ -39,19 +39,19 @@ export default class App extends React.Component {
           <Col lg={12} md={24} sm={24} xs={24}>
             <div className='text-box'>
                 <div className='hello-text deselect' style={{ color: textColor }}>Hello, I'm</div>
-                <div className='name-text deselect'><span style={{ color: textColor, marginRight: 7 }}>{'{'}</span>Radzi Ramli<span style={{ color: textColor, marginLeft: 8}}>{'}'}</span></div>
+                <h1 className='name-text deselect'><span style={{ color: textColor, marginRight: 7 }}>{'{'}</span>Radzi Ramli<span style={{ color: textColor, marginLeft: 8}}>{'}'}</span></h1>
                 <div className='position-text deselect' style={{ color: textColor }}>Full Stack Developer</div>
                 <div className='me-text deselect'>
                   I design and code for 
                   <br/>
                   <span className='flex-row'>
                     Website
-                      <img src='/img/tick.svg' className='tick' />
+                      <img src='/img/tick.svg' alt='/img/tick.svg' className='tick' />
                    </span>
                   <br/>
                   <span className='flex-row'>
                     Mobile
-                      <img src='/img/tick.svg' className='tick' />
+                      <img src='/img/tick.svg' alt='/img/tick.svg' className='tick' />
                    </span>
                 </div>
                 <Col lg={10} sm={8} xs={15}>
@@ -65,7 +65,7 @@ export default class App extends React.Component {
           </Col>
           <Col lg={12} sm={0} xs={0}>
             <div>
-              <img src='/img/laptop.svg' className='main-image' />
+              <img src='/img/laptop.svg' alt='/img/laptop.svg'className='main-image' />
             </div>
           </Col>
         </Row>
@@ -90,31 +90,31 @@ export default class App extends React.Component {
               <br /> <br />
               <Row>
                 <Col lg={9} xs={14}>
-                  <div className='list-wrapper'>
+                  <div>
                     <Emoji symbol='💪' /> I can:
-                    <div style={{ marginTop: '15px'}}>
+                    <ul style={{ marginTop: '15px'}}>
                     {front.map((txt, idx) => {
                       return (
-                      <li key={idx} className='list-array'>
+                      <li key={idx}>
                         {txt}
                       </li>
                       )
                     })}
-                    </div>
+                    </ul>
                   </div>
                 </Col>
                 <Col lg={9} xs={10}>
-                  <div className='list-wrapper'>
+                  <div>
                     <br />
-                    <div style={{ marginTop: '15px'}}>
+                    <ul style={{ marginTop: '15px'}}>
                     {back.map((txt, idx) => {
                       return (
-                      <li key={idx} className='list-array'>
+                      <li key={idx}>
                         {txt}
                       </li>
                       )
                     })}
-                    </div>
+                    </ul>
                   </div>
                 </Col>
               </Row>
@@ -220,6 +220,13 @@ export default class App extends React.Component {
       </section>
 
       <style jsx>{`
+        ul {
+          padding: 0 0 0 25px;
+          position: left;
+        }
+        h1 {
+          margin: 0;
+        }
         .project-img {
           width: 85%;
         }

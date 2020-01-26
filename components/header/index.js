@@ -32,11 +32,9 @@ class Header extends Component {
           <Row>
             <Col xs={12} lg={2}>
               <Link href='/'>
-                <a>
-                  <div>
-                    <img src='/img/avatar.png' style={{ width: 78, zIndex: 10 }} />
-                  </div>
-                </a>
+                <div>
+                  <img src='/img/avatar.png' alt='/img/avatar.png' className='avatar'/>
+                </div>
               </Link>
             </Col>
 
@@ -97,6 +95,13 @@ class Header extends Component {
             cursor: pointer;
             display: none;
             float: right;
+          }
+          .avatar {
+            width: 78px;
+            z-index: 10;
+          }
+          .avatar:hover {
+            cursor: pointer; 
           }
           .desktopMenu {
             letter-spacing: 0.5pt;
