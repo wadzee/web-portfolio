@@ -33,7 +33,7 @@ class Header extends Component {
             <Col xs={12} lg={2}>
               <Link href='/'>
                 <div>
-                  <img src='/img/avatar.png' alt='/img/avatar.png' className='avatar'/>
+                  <img src='/img/avatar.webp' alt='/img/avatar.webp' className='avatar'/>
                 </div>
               </Link>
             </Col>

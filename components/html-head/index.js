@@ -16,11 +16,9 @@ const HtmlHead = (props) => (
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0' />
     <meta name='description' content={'Radzi Ramli Dev Portfolio'} />
     <meta name='keywords' content={'radzi, radzi ramli, radzi ramli malaysia'} />
-    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700,800' rel='stylesheet' />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    {/* <link rel='stylesheet' type='text/css' href='/css/nprogress.css' /> */}
-    <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
-    <link rel='icon' href='/favicon.png' />
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700,800&display=swap' rel='stylesheet' />
+    <link rel='preconnect' href='https://www.google-analytics.com' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon.png' />
 
     {props.children}
   </Head>

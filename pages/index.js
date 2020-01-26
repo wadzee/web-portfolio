@@ -29,8 +29,6 @@ export default class App extends React.Component {
   render () {
     const { color, textColor, lineColor, darkMode } = this.state
     const { front, back, witty } = text
-    const settings = {
-    }
     return (
       <Layout color={color} darkMode={darkMode} textColor={textColor}>
       <section className='main-container'>
@@ -57,7 +55,7 @@ export default class App extends React.Component {
                 <Col lg={10} sm={8} xs={15}>
                 {/* <a href='/file/resume.pdf' target='_blank'> */}
                   <div className='resume-btn'>
-                      <span className='deselect' style={{ color: '#fff'}}>Grab My Resume</span>
+                      <span style={{ color: '#fff'}}>Grab My Resume</span>
                   </div>
                 {/* </a> */}
                 </Col>
@@ -163,7 +161,7 @@ export default class App extends React.Component {
               <div className='project-section'>
                 <Row style={{ width: '100%'}}>
                   <Col lg={16} md={14} sm={24} xs={24}>
-                    <img src='/img/lamboplace.png' className='project-img' alt='/img/lamboplace.png' />
+                    <img src='/img/lamboplace.webp' className='project-img' alt='/img/lamboplace.webp' />
                   </Col>
                   <Col lg={8} md={10} sm={24} xs={24}>
                     <div className='project-container'>
@@ -189,7 +187,7 @@ export default class App extends React.Component {
               <div className='project-section'>
                 <Row style={{ width: '100%'}}>
                   <Col lg={16} md={14} sm={24} xs={24}>
-                    <img src='/img/ikang.png' className='project-img' alt='/img/lamboplace.png' />
+                    <img src='/img/ikang.webp' className='project-img' alt='/img/lamboplace.webp' />
                   </Col>
                   <Col lg={8} md={10} sm={24} xs={24}>
                     <div className='project-container'>
