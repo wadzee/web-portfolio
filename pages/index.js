@@ -162,10 +162,10 @@ export default class App extends React.Component {
               </div> */}
               <div className='project-section'>
                 <Row style={{ width: '100%'}}>
-                  <Col md={16} sm={24} xs={24}>
+                  <Col lg={16} md={14} sm={24} xs={24}>
                     <img src='/img/lamboplace.png' className='project-img' alt='/img/lamboplace.png' />
                   </Col>
-                  <Col md={8} sm={24} xs={24}>
+                  <Col lg={8} md={10} sm={24} xs={24}>
                     <div className='project-container'>
                       Lamboplace
                       <div className='project-madeAt'>
@@ -188,10 +188,10 @@ export default class App extends React.Component {
               </div>
               <div className='project-section'>
                 <Row style={{ width: '100%'}}>
-                  <Col md={16} sm={24} xs={24}>
+                  <Col lg={16} md={14} sm={24} xs={24}>
                     <img src='/img/ikang.png' className='project-img' alt='/img/lamboplace.png' />
                   </Col>
-                  <Col md={8} sm={24} xs={24}>
+                  <Col lg={8} md={10} sm={24} xs={24}>
                     <div className='project-container'>
                       Ikang
                       <div className='project-madeAt'>
@@ -238,6 +238,8 @@ export default class App extends React.Component {
         .project-tool {
           justify-content: space-between;
           text-align: right;
+          width: 110%;
+          margin-left: -10%;
           margin-top: 15px;
           flex-direction: row;
           display: flex;
@@ -275,7 +277,7 @@ export default class App extends React.Component {
           font-size: 25px;
           padding: 7% 7%;
         }
-        @media (min-width: 85.375em) and (max-width: 119em) {
+        @media (min-width: 80em) and (max-width: 119em) {
           .project-tool {
             font-size: 12px;
           }
