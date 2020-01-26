@@ -299,6 +299,8 @@ export default class App extends React.Component {
             font-size: 17px;
           }
           .project-tool {
+            width: 100%;
+            margin-left: 0;
             font-size: 12.5px;
           }
           .project-container {
