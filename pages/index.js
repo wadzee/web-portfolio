@@ -53,11 +53,9 @@ export default class App extends React.Component {
                    </span>
                 </div>
                 <Col lg={10} sm={8} xs={15}>
-                {/* <a href='/file/resume.pdf' target='_blank'> */}
-                  <div className='resume-btn'>
+                  <div className='resume-btn' onClick={() => window.open('/file/resume.pdf', '_blank')}>
                       <span style={{ color: '#fff'}}>Grab My Resume</span>
                   </div>
-                {/* </a> */}
                 </Col>
             </div>
           </Col>
