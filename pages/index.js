@@ -431,6 +431,7 @@ export default class App extends React.Component {
             padding: 2.5% 8%;
           }
           .contact-option {
+            margin-top: 25%;
             font-size: 15px;
           }
           .social-svg {
