@@ -52,7 +52,7 @@ class Header extends Component {
                   <div className='desktopMenu'>Works</div>
                 </AnchorLink>
 
-                <AnchorLink href='/projects'>
+                <AnchorLink href='/contact'>
                   <div className='desktopMenu'>Contact</div>
                 </AnchorLink>
               </div>
@@ -80,7 +80,7 @@ class Header extends Component {
                 <div className='mobileMenuLink' onClick={() => this.handleClick()}>Works</div>
               </AnchorLink>
 
-              <AnchorLink href='/projects'>
+              <AnchorLink href='/contact'>
                 <div className='mobileMenuLink' onClick={() => this.handleClick()}>Contact</div>
               </AnchorLink>
             </div>

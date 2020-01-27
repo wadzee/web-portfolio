@@ -63,6 +63,12 @@ section {
     margin: 0% 17% 5% 17%;
     min-height: 45vw;
 }
+.contact-container {
+    z-index: 0;
+    padding-top: 5%;
+    margin: 0% 17% 5% 17%;
+    min-height: 43vw;
+}
 .describe-me {
     margin-top: 25px;
     font-size: 18px;
@@ -161,6 +167,11 @@ section {
     .describe-me {
         font-size: 15px;
         font-weight: bold;
+    }
+    .contact-container {
+        padding-top: 20%;
+        margin: 0 0 0 0;
+        min-height: 90vh;
     }
     .box-container {
         padding-top: 20%;
