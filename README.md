@@ -8,8 +8,6 @@
 
 > Online Web Portfolio
 
-### 🏠 [Homepage](radziramli.com)
-
 ### ✨ [Demo](radziramlil.com)
 
 ## Install
@@ -23,6 +21,8 @@ yarn install
 ```sh
 yarn dev
 ```
+
+Open your preferred browser and navigate to localhost:5000
 
 ## Author
 
