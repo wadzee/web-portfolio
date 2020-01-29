@@ -1,6 +1,6 @@
 
 <h1 align="center">
-	radziramli.com 📌
+	radziramli.com 🌐
 </h1>
 <p>
 	<img  alt="Version"  src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000"  />
