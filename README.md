@@ -32,18 +32,18 @@ localhost:5000
 
 ## Technologies
 
-![wappalyzer](https://github.com/wadzee/web-portfolio/blob/master/wappalyzer.png)
+![wappalyzer](https://github.com/wadzee/web-portfolio/blob/master/screenshot/wappalyzer.png)
 
 ## Dependencies
 
-![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
+![package.json](https://github.com/wadzee/web-portfolio/blob/master/screenshot/packagejson.png)
 
 
 ## 💡 Lighthouse Audit
 
 **Throttling (Simulated Slow 4x,4x CPU Slowdown)**
 
-![lighthouse](https://github.com/wadzee/web-portfolio/blob/master/lighthouse.png)
+![lighthouse](https://github.com/wadzee/web-portfolio/blob/master/screenshot/lighthouse.png)
 
 ## 👨‍💻 Author
 
