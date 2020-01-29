@@ -1,6 +1,6 @@
 
 <h1 align="center">
-	radziramli.com 📌
+	📌 radziramli.com 
 </h1>
 <p>
 	<img  alt="Version"  src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000"  />
@@ -39,7 +39,7 @@ localhost:5000
 ![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
 
 
-## Lighthouse Audit 💡
+## 💡 Lighthouse Audit
 
 **Throttling (Simulated Slow 4x,4x CPU Slowdown)**
 
