@@ -39,7 +39,7 @@ localhost:5000
 ![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
 
 
-## Lighthouse Audit
+## Lighthouse Audit 💡
 
 **Throttling (Simulated Slow 4x,4x CPU Slowdown)**
 
