@@ -51,12 +51,7 @@ As someone who believe in the open source initiative, I value myself in keeping 
 
 Give a ⭐️ if this project helped you!
 
-<<<<<<< HEAD
 ## 📝 License
 
 Copyright © 2019 [Radzi Ramli](https://github.com/wadzee).
 This project is [MIT](https://github.com/wadzee/web-portfolio/blob/master/LICENSE) licensed.
-=======
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
->>>>>>> 0fc6f06a6b25e5a93aff00f873ee57e7210e2bc8
