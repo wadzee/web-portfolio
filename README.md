@@ -8,7 +8,7 @@
 
 > Online Web Portfolio v2
 
-### 🏠 [Homepage](radziramli.com)
+### 🏠 [Homepage](www.radziramli.com)
 
 ## Install
 
