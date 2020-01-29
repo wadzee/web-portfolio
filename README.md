@@ -29,13 +29,14 @@ Open your preferred browser and enter the following link
 ```sh
 localhost:5000
 ```
-## Dependencies
-
-![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
 
 ## Technologies
 
 ![wappalyzer](https://github.com/wadzee/web-portfolio/blob/master/wappalyzer.png)
+
+## Dependencies
+
+![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
 
 ## 👨‍💻 Author
 
