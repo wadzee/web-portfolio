@@ -1,6 +1,6 @@
 
 <h1 align="center">
-	radziramli.com 📌
+	radziramli.com 🌐
 </h1>
 <p>
 	<img  alt="Version"  src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000"  />
@@ -37,6 +37,13 @@ localhost:5000
 ## Dependencies
 
 ![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
+
+
+## 💡 Lighthouse Audit
+
+**Throttling (Simulated Slow 4x,4x CPU Slowdown)**
+
+![lighthouse](https://github.com/wadzee/web-portfolio/blob/master/lighthouse.png)
 
 ## 👨‍💻 Author
 
