@@ -42,6 +42,7 @@ localhost:5000
 ## Lighthouse Audit
 
 **Throttling (Simulated Slow 4x,4x CPU Slowdown)**
+
 ![lighthouse](https://github.com/wadzee/web-portfolio/blob/master/lighthouse.png)
 
 ## 👨‍💻 Author
