@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to web-portfolio 👋</h1>
+<h1 align="center">radziramli.com 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -6,9 +6,9 @@
   </a>
 </p>
 
-> Online Web Portfolio
+> Online Web Portfolio v2
 
-### ✨ [Demo](radziramlil.com)
+### 🏠 [Homepage](radziramli.com)
 
 ## Install
 
@@ -22,8 +22,6 @@ yarn install
 yarn dev
 ```
 
-Open your preferred browser and navigate to localhost:5000
-
 ## Author
 
 👤 **Radzi Ramli**
@@ -35,3 +33,6 @@ Open your preferred browser and navigate to localhost:5000
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
