@@ -26,6 +26,7 @@ section {
     margin-top: 35px;
     padding: 20px;
     background-color: #45B29A;
+    transition: ease-out; 
 }
 .btn-width {
     width: 36%;
@@ -34,7 +35,7 @@ section {
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 0 10px #4990FE22, 0 0 5px #4990FE22;
-  }
+}
 .deselect {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -53,7 +54,7 @@ section {
     position: absolute;
     z-index: 0;
     background: #45B29A;
-    opacity: 0.4;
+    opacity: 0.7;
     -webkit-transform: rotate(42deg);
     -webkit-transform-origin: 31% 0%;
 }
@@ -93,6 +94,7 @@ section {
     linear-gradient(#45B29A, #45B29A);
 }
 .hello-text {
+    color: #fff;
     font-size: 35pt;
 }
 .name-text {
@@ -101,6 +103,7 @@ section {
     color: #45B29A;
 }
 .position-text {
+    color: #fff;
     font-size: 25pt;
 }
 .me-text {

@@ -39,7 +39,8 @@ class Footer extends Component {
               text-align: center;
             }
           }
-        `}</style>
+        `}
+        </style>
       </div>
     )
   }

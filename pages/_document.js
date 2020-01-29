@@ -8,6 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
+      // for better accessibility report on google lighthouse audit
       <Html lang='en'>
         <Head />
         <body>

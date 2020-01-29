@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { theme } from '../../config'
 import PropTypes from 'prop-types'
 
 export default class SideModal extends Component {
 
   render () {
-    const { buttons, children, onClose, showModal, title, color, darkMode } = this.props
+    const { children, onClose, showModal, title, color } = this.props
 
     return (
       <div className={'wd-side-modal' + (showModal ? ' wd-side-modal-show' : ' wd-side-modal-hide')}>
@@ -13,13 +14,13 @@ export default class SideModal extends Component {
           <div className='close' onClick={onClose}>&#x2715;</div>
         </div>
         <div className='content'>
-          { children }
+          {children}
         </div>
         {/* <div className='footer'>
           { buttons || null }
         </div> */}
 
-      <style jsx>{`
+        <style jsx>{`
         .wd-side-modal {
           width: 380px;
           /* min-width: 380px;
@@ -61,7 +62,7 @@ export default class SideModal extends Component {
           width: 30px;
           height: 30px;
           font-size: 30pt;
-          color: #45B29A;
+          color: ${theme.color.secondary};
           cursor: pointer;
           text-align: right;
         }
@@ -116,7 +117,7 @@ export default class SideModal extends Component {
           }
         }
       `}
-      </style>
+        </style>
       </div>
     )
   }

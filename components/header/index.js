@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { withRouter } from 'next/router'
 import { SideModal } from '../index'
 import { theme } from '../../config'
-import { Col, Icon, Row } from 'antd'
+import { Col, Row } from 'antd'
 import Link from 'next/link'
 
 class Header extends Component {
@@ -234,11 +234,6 @@ class Header extends Component {
       </div>
     )
   }
-
-  // getMyAccountLink = () => {
-  //   const { type = '' } = authService.getCurrentUser() || {}
-  //   return `/${type.replace(' ', '')}`
-  // }
 }
 
 export default withRouter(Header)

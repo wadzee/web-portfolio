@@ -1,0 +1,67 @@
+.center-text {
+  text-align: center;
+}
+.contact-text {
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: 55px;
+  color: #f4f4f4;
+}
+.contact-description {
+  font-size: 18px;
+  margin-top: 5%;
+}
+.social-svg {
+  width: 24px;
+}
+.social-svg:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+.contact-option {
+  margin-top: 10%;
+  font-weight: normal;
+  font-size: 18px;
+}
+.intro-text {
+  color: rgb(204, 214, 246);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 7% 7%;
+}
+.email-button {
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 10%;
+  border-radius: 5px;
+  border: 2px solid rgb(100, 255, 218);
+  color: rgb(100, 255, 218);
+  padding: 2% 5%;
+}
+.email-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .contact-option {
+    margin-top: 25%;
+    font-size: 15px;
+  }
+  .work-container {
+    margin: 0% 5%;
+  }
+  .social-svg {
+    width: 22px;
+  }
+  .contact-text {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+  .email-button {
+    padding: 2.5% 8%;
+  }
+  .contact-description {
+    font-size: 15.5px;
+  }
+}
