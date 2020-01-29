@@ -33,6 +33,10 @@ localhost:5000
 
 ![package.json](https://github.com/wadzee/web-portfolio/blob/master/packagejson.PNG)
 
+## Technologies
+
+![wappalyzer](https://github.com/wadzee/web-portfolio/blob/master/wappalyzer.png)
+
 ## 👨‍💻 Author
 
 **Radzi Ramli**
