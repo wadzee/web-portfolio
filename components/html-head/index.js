@@ -19,7 +19,9 @@ const HtmlHead = (props) => (
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700,800&display=swap' rel='stylesheet' />
     <link rel='preconnect' href='https://www.google-analytics.com' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon.png' />
-
+    <meta content='/img/portfolio.webp' property='og:image' />
+    <meta content='Web Portfolio for Radzi Ramli' property='og:description' />
+    <meta content='Radzi Ramli' property='og:title' />
     {props.children}
   </Head>
 )
