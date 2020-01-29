@@ -6,7 +6,7 @@ import { Layout } from '../components/'
 import { Projects, Intro, About, Contact } from '../section'
 import { theme } from '../config'
 import { project, skill } from '../constant'
-import './styles.css'
+import './global.css'
 
 export default class App extends Component {
   
@@ -102,6 +102,10 @@ export default class App extends Component {
               Ikang is an e-commerce platform that <span style={{ color: theme.color.secondary}}>sells fresh seafood products</span> online   
               and provides deliveries to most parts of Klang Valley.                      
             </Projects>
+            <Projects project={project.webportfolio}>
+              An online web portfolio develop using Nextjs <span style={{ color: theme.color.secondary}}>for server-side render and better SEO.</span> This project was done
+              to showcase my ability to code and develop website with UI/UX in mind.
+            </Projects>
             <Projects project={project.saraponic}>
               SaraPonics is a smart hydroponic system that <span style={{ color: theme.color.secondary}}>automatically grow plants.</span> The system allow
               user to monitor the plant condition remotely and maintain PH and Nutrient level of the plant automatically.                      
@@ -126,11 +130,6 @@ export default class App extends Component {
         h1 {
           margin: 0;
         }
-        .contact-option {
-          margin-top: 10%;
-          font-weight: normal;
-          font-size: 18px;
-        }
         .email-button {
           font-size: 20px;
           display: inline-block;
@@ -144,25 +143,8 @@ export default class App extends Component {
           transform: scale(1.1);
           cursor: pointer;
         }
-        .contact-text {
-          margin-top: 5%;
-          font-weight: bold;
-          font-size: 55px;
-          color: #f4f4f4;
-        }
-        .contact-description {
-          font-size: 18px;
-          margin-top: 5%;
-        }
         .link-svg {
           width: 22px;
-        }
-        .social-svg {
-          width: 24px;
-        }
-        .social-svg:hover {
-          transform: scale(1.4);
-          cursor: pointer;
         }
         .center-text {
           text-align: center;
@@ -170,46 +152,6 @@ export default class App extends Component {
         .link-svg:hover {
           cursor: pointer;
           transform: scale(1.2);
-        }
-        .project-link {
-          margin-top: 5%;
-        }
-        .project-img {
-          width: 85%;
-        }
-        .project-container {
-          margin-top: 10%;
-          font-size: 22px;
-          text-align: right;
-        }
-        .project-section {
-          margin-top: 40px;
-        }
-        .project-madeAt {
-          font-weight: normal;
-          font-size: 22px;
-        }
-        .project-tool {
-          justify-content: space-between;
-          text-align: right;
-          width: 110%;
-          margin-left: -10%;
-          margin-top: 15px;
-          flex-direction: row;
-          display: flex;
-          font-size: 15px;
-        }
-        .project-description {
-          border-radius: 10px;
-          text-align: left;
-          font-size: 15px;
-          font-weight: normal;
-          z-index: 10;
-          width: 140%;
-          margin: 25px 0 0 -40%;
-          padding: 20px;
-          background-color: rgb(23, 42, 69);
-          box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
         }
         .witty-list {
           float: left;
@@ -227,76 +169,7 @@ export default class App extends Component {
           font-size: 25px;
           padding: 7% 7%;
         }
-        @media (min-width: 80em) and (max-width: 119em) {
-          .project-tool {
-            font-size: 12px;
-          }
-          .project-description {
-            font-size: 13.5px;
-            margin-top: 5%;
-          }
-          .project-container {
-            margin-top: 15px;
-            font-size: 22px;
-            text-align: right;
-          }
-        }
-        @media (min-width: 160em) {
-          .project-tool {
-            font-size: 17px;
-          }
-          .project-description {
-            font-size: 18.5px;
-          }
-        }
         @media (max-width: 480px) {
-          .contact-text {
-            margin-top: 25px;
-            font-size: 30px;
-          }
-          .project-link {
-            display: flex;
-            margin-top: 12.5px;
-            justify-content: flex-end;
-          }
-          .contact-description {
-            font-size: 15.5px;
-          }
-          .email-button {
-            padding: 2.5% 8%;
-          }
-          .contact-option {
-            margin-top: 25%;
-            font-size: 15px;
-          }
-          .social-svg {
-            width: 22px;
-          }
-          .project-madeAt {
-            font-size: 17px;
-          }
-          .project-tool {
-            width: 100%;
-            margin-left: 0;
-            font-size: 12.5px;
-          }
-          .project-container {
-            text-align: left;
-            font-size: 20px;
-            margin: 0;
-            padding: 5%;
-            background-color: rgb(23, 42, 69);
-            box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
-          }
-          .project-description {
-            box-shadow: none;
-            padding: 0;
-            width: 100%;
-            margin: 10px 0;
-          }
-          .project-img {
-            width: 100%;
-          }
           .intro-text {
             padding: 3% 5%;
             font-size: 22px;

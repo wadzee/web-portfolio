@@ -17,7 +17,7 @@ export default class Project extends Component {
                   {project.name}
                   <div className='project-madeAt'>
                     {project.personal ? '' : 'Made At '}
-                    <span className='company'>{project.personal ? 'Final Year Project' : 'Witty Data'}</span>
+                    <span className='company'>{project.madeAt}</span>
                   </div>
                   <div className='project-description'>
                     {children}

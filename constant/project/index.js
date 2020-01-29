@@ -40,5 +40,19 @@ module.exports = {
     img: '/img/saraponic.webp',
     github: true,
     link: 'https://github.com/wadzee/automated-hydroponics'
+  },
+  webportfolio: {
+    name: 'Web Portfolio',
+    personal: true,
+    madeAt: 'Personal Project',
+    tools: [
+      '#Nextjs',
+      '#Antd',
+      '#Google Analytics',
+      '#Lambda'
+    ],
+    img: '/img/portfolio.webp',
+    github: true,
+    link: 'https://github.com/wadzee/web-portfolio'
   }
 }
