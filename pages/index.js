@@ -55,14 +55,15 @@ export default class App extends Component {
         <Row className='row-width'>
           <About>
             <div className='describe-me'>
-              Hello! I'm Radzi, a software engineer who<span style={{ color: theme.color.secondary }}> recently just graduated from University Malaysia Sarawak</span> with a degree in Computer 
-              Science. I have experience developing and (occasionally) designing 
+              Hello! I'm Radzi, a software engineer who<span style={{ color: theme.color.secondary }}> recently just graduated from University Malaysia Sarawak</span> with 
+              a degree in Computer Science. I have experience developing and (occasionally) designing 
               software for both web and mobile application.
               <br /> <br />
               I love learning new things and have a strong interest in projects that
               require both conceptual and analytical thinking to solve them. I aspire
               towards a career that will allow me to channel my ability to the fullest
-              and at the same time grow them.
+              and at the same time grow them. Currently based in Kota Kinabalu, Sabah but
+              are willing to move to other parts of the country for work.
               <br /> <br />
               Here are a list of technologies I can do <Emoji symbol='💪'/>
               <br />
