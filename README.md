@@ -55,7 +55,7 @@ localhost:5000
 
 ## Forking this repo
 
-This project is given as it is. You may for use it for your own project but please give appropriate attribution to me by linking it back to this repo. 
+This project is given as it is. You may use it for your own project but please give appropriate attribution to me by linking it back to this repo. 
 
 As someone who believe in the open source initiative, I value myself in keeping this project as <b>open</b> as possible. If this project helped in anyway, do give this repo a ⭐️! It motivates me to open more project in the future!
 
@@ -65,6 +65,6 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 [Radzi Ramli](https://github.com/wadzee).
+Copyright © 2020 [Radzi Ramli](https://github.com/wadzee).
 
 This project is [MIT](https://github.com/wadzee/web-portfolio/blob/master/LICENSE) licensed.
