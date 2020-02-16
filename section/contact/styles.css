@@ -14,6 +14,12 @@
 .social-svg {
   width: 24px;
 }
+.hired {
+  color: rgb(100, 255, 218);
+}
+.no-job {
+  text-decoration: line-through;
+}
 .social-svg:hover {
   transform: scale(1.4);
   cursor: pointer;

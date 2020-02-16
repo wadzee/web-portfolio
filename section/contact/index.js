@@ -13,8 +13,8 @@ export default class Contact extends Component {
           Get In Touch
         </div>
         <div className='contact-description'>
-          Currently looking for a job or any freelance opportunities, 
-          whichever is available. My inbox is always open for everyone,
+          Currently <span className='no-job'>looking for a job or any freelance opportunities</span><span className='hired'> Hired, sorry!</span> I am still available for any project thought!
+          . My inbox is always open for everyone,
           recruiters or strangers wanting to say hi.
         </div>
         <div className='email-button' onClick={() => window.open('mailto:radzi@radziramli.com')}>
