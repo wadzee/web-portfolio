@@ -28,17 +28,15 @@
     "nprogress": "^0.2.0",
     "null-loader": "^3.0.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^16.12.0",
+    "react-dom": "^16.13.0",
     "react-ga": "^2.7.0"
   },
   "devDependencies": {
     "eslint-config-standard-jsx": "^8.1.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-app": "^6.1.0",
-    "prettier": "^1.19.1",
     "serverless-nextjs-plugin": "^2.4.4"
   }
 }

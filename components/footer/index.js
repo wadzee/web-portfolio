@@ -1,19 +1,18 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import { withRouter } from 'next/router'
 
-class Footer extends Component {
-  render () {
-    return (
-      <div>
-        <div className='copyright'>
-          <div className='container'>
+function Footer (props) {
+  return (
+    <div>
+      <div className='copyright'>
+        <div className='container'>
             Copyright © <span style={{ textDecorationLine: 'underline', marginBottom: 2 }}>Radzi Ramli</span> (2020)
             
-          </div>
         </div>
+      </div>
 
-        <style jsx>{`
+      <style jsx>{`
           .underline {
             border-bottom-width: 2;
             border-color: #000;
@@ -23,8 +22,8 @@ class Footer extends Component {
             flex: 1;
             padding: 20px;
             font-size: 9.5pt;
-            color: ${this.props.textColor};
-            background-color: ${this.props.color};
+            color: ${props.textColor};
+            background-color: ${props.color};
             // border-top: 1px solid #fff;
           }
           .container {
@@ -40,10 +39,9 @@ class Footer extends Component {
             }
           }
         `}
-        </style>
-      </div>
-    )
-  }
+      </style>
+    </div>
+  )
 }
 
 export default withRouter(Footer)

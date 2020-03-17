@@ -1,26 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { theme } from '../../config'
-import PropTypes from 'prop-types'
 
-export default class SideModal extends Component {
-
-  render () {
-    const { children, onClose, showModal, title, color } = this.props
-
-    return (
-      <div className={'wd-side-modal' + (showModal ? ' wd-side-modal-show' : ' wd-side-modal-hide')}>
-        <div className='header'>
-          <div>{title}</div>
-          <div className='close' onClick={onClose}>&#x2715;</div>
-        </div>
-        <div className='content'>
-          {children}
-        </div>
-        {/* <div className='footer'>
+export default function SideModal (props) {
+  const { children, onClose, showModal, title, color } = props
+  return (
+    <div className={'wd-side-modal' + (showModal ? ' wd-side-modal-show' : ' wd-side-modal-hide')}>
+      <div className='header'>
+        <div>{title}</div>
+        <div className='close' onClick={onClose}>&#x2715;</div>
+      </div>
+      <div className='content'>
+        {children}
+      </div>
+      {/* <div className='footer'>
           { buttons || null }
         </div> */}
 
-        <style jsx>{`
+      <style jsx>{`
         .wd-side-modal {
           width: 380px;
           /* min-width: 380px;
@@ -117,12 +113,7 @@ export default class SideModal extends Component {
           }
         }
       `}
-        </style>
-      </div>
-    )
-  }
-}
-
-SideModal.propTypes = {
-  title: PropTypes.string
+      </style>
+    </div>
+  )
 }

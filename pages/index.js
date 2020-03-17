@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'antd'
 import ReactGA from 'react-ga'
 import Emoji from 'a11y-react-emoji'
@@ -8,49 +8,40 @@ import { theme } from '../config'
 import { project, skill } from '../constant'
 import './global.css'
 
-export default class App extends Component {
-  
-  state = {
+export default function App () {
+  const [state, setState] = useState({
     color: '#171c28',
     textColor: '#fff',
     darkMode: true
-  }
+  })
+  const { work } = skill
+  const { witty } = work
 
-  //google analytics
-  initializeGA () {
-    ReactGA.initialize('UA-156695268-1') //set your own GA key here
-    ReactGA.pageview(window.location.pathname)
-  }
+  useEffect(() => {
+    function initializeGA() {
+      ReactGA.initialize('UA-156695268-1') //set your own GA key here
+      ReactGA.pageview(window.location.pathname)
+    }
+    initializeGA
+  })
 
-  renderMap = (obj) => {
+  const renderMap = (obj) => {
     return (
       obj.map((txt, idx) => {
         return (
-        <li key={idx} style={{ marginTop: '10px' }}>
-          {txt}
-        </li>
+          <li key={idx} style={{ marginTop: '10px' }}>
+            {txt}
+          </li>
         )
       })
     )
   }
 
-  componentDidMount() {
-    // only run google analytics in production environment
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'production') {
-      this.initializeGA()
-    }
-  }
-
-  render () {
-    const { color, textColor, darkMode } = this.state
-    const { work } = skill
-    const { witty } = work
-    return (
-      <Layout color={color} darkMode={darkMode} textColor={textColor}>
+  return (
+    <Layout color={state.color} darkMode={state.darkMode} textColor={state.textColor}>
       <section className='main-container'>
         <Intro />
       </section>
-
       <section className='box-container' id='about-me'> 
         <Row className='row-width'>
           <About>
@@ -65,18 +56,17 @@ export default class App extends Component {
               and at the same time grow them. Currently based in Kota Kinabalu, Sabah but
               are willing to move to other parts of the country for work.
               <br /> <br />
-              Here are a list of technologies I can do <Emoji symbol='💪'/>
+              Here are a list of technologies I can do <Emoji symbol='💪' />
               <br />
             </div>
           </About>
         </Row>
       </section>
-
       <section className='box-container' id='experience'> 
         <Row className='row-width'>
           <Col lg={{ span: 12, offset: 6 }} md={24} xs={24}>
             <div className='intro-text work-container'>
-            <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
+              <span style={{ color: theme.color.secondary}}>02.</span> Work Experience
               <div className='work-tabs'>
                 <span style={{ color: '#f4f4f4'}}>Internship</span> @ Witty Data
               </div>
@@ -84,13 +74,12 @@ export default class App extends Component {
                 July 2019 - Dec 2019
               </div>
               <ul className='witty-list'>
-                {this.renderMap(witty)}
+                {renderMap(witty)}
               </ul>
             </div>
           </Col>
         </Row>
       </section>
-
       <section className='box-container' id='projects'> 
         <Row className='row-width'>
           <div className='intro-text section-container'>
@@ -111,10 +100,9 @@ export default class App extends Component {
               SaraPonics is a smart hydroponic system that <span style={{ color: theme.color.secondary}}>automatically grow plants.</span> The system allow
               user to monitor the plant condition remotely and maintain PH and Nutrient level of the plant automatically.                      
             </Projects>
-            </div>
+          </div>
         </Row>
       </section>
-
       <section className='contact-container' id='contact'> 
         <Row className='row-width'>
           <Col lg={{ span: 16, offset: 4 }} md={24} xs={24}>
@@ -191,6 +179,5 @@ export default class App extends Component {
         `}
       </style>
     </Layout>
-    )
-  }
+  )
 }

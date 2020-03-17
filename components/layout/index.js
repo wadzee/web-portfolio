@@ -1,35 +1,29 @@
-import React, { Component } from 'react'
-import { Head, Header, Footer } from '../index'
+import React from 'react'
+import { Header, Footer } from '../index'
 
 
-class Layout extends Component {
-  async componentDidMount () {
-
+function Layout (props) {
+  const { children, color, darkMode, textColor } = props
+  let { showFooter, showHeader } = props
+  showFooter = typeof showFooter === 'boolean' ? showFooter : true
+  showHeader = typeof showHeader === 'boolean' ? showHeader : true
+  const layoutStyle = {
+    backgroundColor: color,
+    margin: 'auto',
+    marginTop: 0,
+    marginBottom: 0,
   }
 
-  render () {
-    const { children, color, darkMode, textColor } = this.props
-    let { showFooter, showHeader } = this.props
-    showFooter = typeof showFooter === 'boolean' ? showFooter : true
-    showHeader = typeof showHeader === 'boolean' ? showHeader : true
-    const layoutStyle = {
-      backgroundColor: color,
-      margin: 'auto',
-      marginTop: 0,
-      marginBottom: 0,
-    }
+  return (
+    <div style={layoutStyle}>
 
-    return (
-      <div style={layoutStyle}>
-        <Head />
+      {showHeader ? <Header color={color} darkMode={darkMode} textColor={textColor}/> : null}
 
-        {showHeader ? <Header color={color} darkMode={darkMode} textColor={textColor}/> : null}
+      {children}
 
-        {children}
+      {showFooter ? <Footer color={color} textColor={textColor}/> : null}
 
-        {showFooter ? <Footer color={color} textColor={textColor}/> : null}
-
-        <style jsx global>{`
+      <style jsx global>{`
           body {
             font-family: 'Quicksand', sans-serif;
             margin: 0;
@@ -71,9 +65,8 @@ class Layout extends Component {
             }
           }
         `}</style>
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Layout
