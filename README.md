@@ -10,10 +10,15 @@
 </p>
 
 **Short description**
-> Online Web Portfolio Made with [Nextjs](https://nextjs.org/)
+> Online Web Portfolio Made with [Nextjs](https://nextjs.org/) (now with React Hooks!)
 
 ### 🚀 [Live Site](https://radziramli.com/)
 
+## Changelog
+
+```sh
+2.0 - Updated for React Hook! No more class components!
+```
 
 ## Installation
 ```sh
