@@ -54,7 +54,7 @@ export default function App () {
               require both conceptual and analytical thinking to solve them. I aspire
               towards a career that will allow me to channel my ability to the fullest
               and at the same time grow them. Currently based in Kota Kinabalu, Sabah but
-              are willing to move to other parts of the country for work.
+              are willing to move to other parts of the country for work. lel
               <br /> <br />
               Here are a list of technologies I can do <Emoji symbol='💪' />
               <br />
