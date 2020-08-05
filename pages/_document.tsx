@@ -1,7 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
-import theme from 'src/themes'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -10,7 +9,8 @@ export default class MyDocument extends Document {
 
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App: any) => (props: any) => sheets.collect(<App {...props} />)
+        enhanceApp: (App: any) => (props: any) =>
+          sheets.collect(<App {...props} />)
       })
 
     const initialProps = await Document.getInitialProps(ctx)
@@ -18,7 +18,10 @@ export default class MyDocument extends Document {
     return {
       ...initialProps,
       // Styles fragment is rendered after the app and page rendering finish.
-      styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()]
+      styles: [
+        ...React.Children.toArray(initialProps.styles),
+        sheets.getStyleElement()
+      ]
     }
   }
 
@@ -26,7 +29,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body style={{ backgroundColor: theme.palette.primary.main }}>
+        <body>
           <Main />
           <NextScript />
         </body>

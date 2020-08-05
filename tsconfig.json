@@ -15,7 +15,6 @@
     "baseUrl": ".",
     "paths": {
       "components/*": ["src/components/*"],
-      "images": ["assets/images/*"],
       "fonts": ["assets/fonts/*"]
     },
     "isolatedModules": true

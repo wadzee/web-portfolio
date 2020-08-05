@@ -1,9 +1,10 @@
-import { Box, Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+import Layout from 'components/layout'
 
 export default function Home() {
   return (
-    <Box py={2}>
-      <Typography variant="h1">Starter Pack!</Typography>
-    </Box>
+    <Layout>
+      <Typography variant="body1">layout</Typography>
+    </Layout>
   )
 }

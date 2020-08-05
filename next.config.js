@@ -1,4 +1,3 @@
-// next.config.js
 const nextConfig = {
   webpack: function (config) {
     config.module.rules.push({
@@ -8,6 +7,18 @@ const nextConfig = {
         options: {
           limit: 100000,
           name: '[name].[ext]'
+        }
+      }
+    })
+
+    config.module.rules.push({
+      test: /\.(png|jpg|webp)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          publicPath: `/_next/static/files`,
+          outputPath: 'static/files'
         }
       }
     })

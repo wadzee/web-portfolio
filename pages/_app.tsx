@@ -18,8 +18,11 @@ export default function MyApp(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Nextjs-Starter</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <title>Radzi Ramli</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
         <link href="/favicon.png" rel="shortcut icon" />
       </Head>
       <ThemeProvider theme={theme}>

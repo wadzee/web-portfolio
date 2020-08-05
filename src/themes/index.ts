@@ -16,6 +16,7 @@ let theme = createMuiTheme({
     fontSize: 16,
     h1: {
       fontSize: '3rem',
+      color: '#e6f1ff',
       lineHeight: 1,
       letterSpacing: 0
     },
@@ -40,30 +41,48 @@ let theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        '@font-face': [...Quicksand]
+        '@font-face': [...Quicksand],
+        body: {
+          '-webkit-overflow-scrolling': 'touch',
+          overflowY: 'scroll',
+          scrollbarColor: 'red',
+          '&::-webkit-scrollbar': {
+            width: '.25rem',
+            height: '.05rem'
+          },
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: 'transparent'
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: 'rgba(100, 255, 218, 0.7)',
+            borderRadius: 10
+          }
+        }
       }
     }
   },
   palette: {
     common: {
-      white: '#fff',
-      black: '#333'
+      white: '#e6f1ff'
     },
     primary: {
-      main: '#171c28'
+      main: '#64ffda'
     },
     secondary: {
       main: '#6451e1'
     },
     text: {
-      primary: 'rgb(204,214,246)'
+      primary: '#ccd6f6'
+    },
+    background: {
+      default: '#171c28'
     }
   },
   breakpoints: {
     values: {
       xs: 0,
       sm: 600,
-      md: 1152,
+      md: 1024,
       lg: 1280,
       xl: 1920
     }
