@@ -1,33 +1,19 @@
-/* eslint-disable */
-const withLess = require('@zeit/next-less')
-const withCSS = require('@zeit/next-css')
-const withImages = require('next-images')
-
-module.exports = withLess(withCSS(withImages({
-  lessLoaderOptions: {
-    javascriptEnabled: true,
-  },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      const antStyles = /antd\/.*?\/style.*?/
-      const origExternals = [...config.externals]
-      config.externals = [
-        (context, request, callback) => {
-          if (request.match(antStyles)) return callback()
-          if (typeof origExternals[0] === 'function') {
-            origExternals[0](context, request, callback)
-          } else {
-            callback()
-          }
+// next.config.js
+const nextConfig = {
+  webpack: function (config) {
+    config.module.rules.push({
+      test: /\.(eot|woff|woff2|ttf|svg)$/,
+      use: {
+        loader: "url-loader",
+        options: {
+          limit: 100000,
+          name: "[name].[ext]",
         },
-        ...(typeof origExternals[0] === 'function' ? [] : origExternals),
-      ]
+      },
+    });
 
-      config.module.rules.unshift({
-        test: antStyles,
-        use: 'null-loader',
-      })
-    }
-    return config
+    return config;
   },
-})))
+};
+
+module.exports = nextConfig;
