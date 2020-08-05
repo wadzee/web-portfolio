@@ -4,16 +4,16 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|svg)$/,
       use: {
-        loader: "url-loader",
+        loader: 'url-loader',
         options: {
           limit: 100000,
-          name: "[name].[ext]",
-        },
-      },
-    });
+          name: '[name].[ext]'
+        }
+      }
+    })
 
-    return config;
-  },
-};
+    return config
+  }
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

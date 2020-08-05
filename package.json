@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next -p 5000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,json,md,ts,tsx}\""
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -13,11 +14,18 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "devDependencies": {
     "@types/node": "^14.0.25",
     "babel-plugin-module-resolver": "^4.0.0",
     "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "typescript": "^3.9.7",
     "url-loader": "^4.1.0"
   }
