@@ -55,7 +55,7 @@ const Footer = () => {
       width="100%"
       display="flex"
       justifyContent="center">
-      <Typography>Copyright © Radzi Ramli (2020)</Typography>
+      <Typography>Copyright © Radzi Ramli (2021)</Typography>
     </Box>
   )
 }

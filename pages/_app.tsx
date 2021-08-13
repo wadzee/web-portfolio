@@ -27,7 +27,6 @@ export default function MyApp(props: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {/*container to set maxwidth of body*/}
         <Container maxWidth="lg">
           <Component {...pageProps} />
         </Container>
